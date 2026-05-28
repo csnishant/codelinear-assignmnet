@@ -4,12 +4,12 @@ import { ArrowUpRight } from "lucide-react";
 const ActivityCard = () => {
   return (
     <div
-      className="absolute left-0 bottom-[14%] md:left-auto md:top-40 
-                 w-[42%] aspect-[2/1] md:w-48 md:h-24 
-                 bg-white/40 border border-white/30 rounded-xl shadow-lg overflow-hidden box-border"
+      className="absolute bottom-[16%] left-[-14%] w-[54%] aspect-[198/95] 
+                 bg-white/60 border border-white/40 rounded-xl 
+                 shadow-[0_12px_40px_rgba(0,0,0,0.12)] overflow-hidden"
       style={{
-        backdropFilter: "blur(20px)",
-        WebkitBackdropFilter: "blur(20px)",
+        backdropFilter: "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
       }}>
       {/* Main Container */}
       <div className="w-full h-full p-2 flex flex-col justify-between text-black font-sans box-border">

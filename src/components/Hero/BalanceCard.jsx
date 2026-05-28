@@ -3,73 +3,85 @@ import { Bell, ArrowUpRight, CircleDollarSign, LayoutGrid } from "lucide-react";
 
 const BalanceCard = () => {
   return (
+    // BalanceCard ke main outer div ki classes me yeh change karein:
     <div
-      className="absolute top-[8%] right-0 w-[45%] h-[58%] bg-white/40 border border-white/20 rounded-[4%]"
+      className="absolute top-[8%] -right-15 md:-right-15 w-[45%] h-[58%] 
+             bg-white/40 border border-white/30 rounded-2xl 
+             shadow-[0_8px_32px_0_rgba(0,0,0,0.15)] overflow-hidden box-border"
       style={{
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",
       }}>
-      <div className="w-full h-full p-[6%] flex flex-col justify-between text-black select-none shadow-[0px_0px_27.57px_8.92px_rgba(0,0,0,0.25)] transition-all hover:scale-[1.03] duration-300">
-        {/* Profile & Notification */}
-        <div className="flex justify-between items-start">
-          <div className="flex items-center gap-[6%] w-[75%]">
-            <div className="w-[28%] aspect-square rounded-full bg-gray-300 overflow-hidden border border-white/40 flex-shrink-0">
+      {/* Main Container */}
+      <div className="w-full h-full p-4 flex flex-col justify-between text-black font-sans select-none box-border">
+        {/* 1. Profile & Notification Header */}
+        <div className="flex justify-between items-center">
+          {/* Profile Details */}
+          <div className="flex items-center gap-2 min-w-0">
+            <div className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/40 overflow-hidden flex-shrink-0">
               <img
                 src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=60"
                 alt="Toni Kross"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="truncate">
-              <h4 className="text-[min(2.5vw,11px)] font-bold leading-tight truncate">
+            <div className="min-w-0 flex flex-col">
+              <h4 className="text-[10px] md:text-xs font-bold leading-tight truncate">
                 Toni Kross
               </h4>
-              <p className="text-[min(1.8vw,8px)] text-black/60 truncate">
+              <p className="text-[7.5px] md:text-[9px] text-black/50 leading-none truncate">
                 Good Morning
               </p>
             </div>
           </div>
-          <button className="p-[4%] bg-white/40 rounded-full cursor-pointer hover:bg-white/60 transition-colors flex items-center justify-center">
-            <Bell className="w-[min(2.8vw,14px)] h-[min(2.8vw,14px)] text-black/80" />
+
+          {/* Notification Button */}
+          <button className="w-6 h-6 md:w-7 md:h-7 bg-white/40 border border-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/60 transition-colors flex-shrink-0">
+            <Bell className="w-3.5 h-3.5 text-black/70" />
           </button>
         </div>
 
-        {/* Balance */}
-        <div className="my-[2%]">
-          <p className="text-[min(2vw,9px)] text-black/60 uppercase tracking-wider font-medium">
+        {/* 2. Total Balance Section */}
+        <div className="my-auto py-2">
+          <p className="text-[7.5px] md:text-[9px] text-black/50 uppercase tracking-wider font-semibold mb-0.5">
             Total balance
           </p>
-          <p className="text-[min(3.8vw,17px)] font-bold text-[#0D3578] whitespace-nowrap">
+          <p className="text-sm md:text-lg font-bold text-[#0D3578] tracking-tight whitespace-nowrap">
             $42,295.00{" "}
-            <span className="text-[min(2.5vw,11px)] font-semibold">USD</span>
+            <span className="text-[10px] md:text-xs font-semibold text-[#0D3578]">
+              USD
+            </span>
           </p>
         </div>
 
-        {/* Quick Actions */}
-        <div className="grid grid-cols-3 gap-[4%] text-center">
+        {/* 3. Quick Actions Grid */}
+        <div className="grid grid-cols-3 gap-2 text-center mt-auto">
+          {/* Fund Transfer */}
           <div className="flex flex-col items-center cursor-pointer group">
-            <div className="p-[14%] bg-white/50 rounded-md mb-[8%] group-hover:bg-white transition-colors flex items-center justify-center aspect-square w-full max-w-[28px]">
-              <ArrowUpRight className="w-full h-full text-black" />
+            <div className="w-7 h-7 md:w-8 md:h-8 bg-white/50 border border-white/20 rounded-lg flex items-center justify-center group-hover:bg-white transition-colors shadow-sm mb-1.5">
+              <ArrowUpRight className="w-3.5 h-3.5 text-black/80" />
             </div>
-            <span className="text-[min(1.6vw,7px)] font-bold tracking-tight text-black/80 block line-clamp-2">
+            <span className="text-[7px] md:text-[8px] font-bold text-black/80 tracking-tight whitespace-nowrap">
               Fund Transfer
             </span>
           </div>
 
+          {/* Add Money */}
           <div className="flex flex-col items-center cursor-pointer group">
-            <div className="p-[14%] bg-white/50 rounded-md mb-[8%] group-hover:bg-white transition-colors flex items-center justify-center aspect-square w-full max-w-[28px]">
-              <CircleDollarSign className="w-full h-full text-black" />
+            <div className="w-7 h-7 md:w-8 md:h-8 bg-white/50 border border-white/20 rounded-lg flex items-center justify-center group-hover:bg-white transition-colors shadow-sm mb-1.5">
+              <CircleDollarSign className="w-3.5 h-3.5 text-black/80" />
             </div>
-            <span className="text-[min(1.6vw,7px)] font-bold tracking-tight text-black/80 block line-clamp-2">
+            <span className="text-[7px] md:text-[8px] font-bold text-black/80 tracking-tight whitespace-nowrap">
               Add Money
             </span>
           </div>
 
+          {/* More */}
           <div className="flex flex-col items-center cursor-pointer group">
-            <div className="p-[14%] bg-white/50 rounded-md mb-[8%] group-hover:bg-white transition-colors flex items-center justify-center aspect-square w-full max-w-[28px]">
-              <LayoutGrid className="w-full h-full text-black" />
+            <div className="w-7 h-7 md:w-8 md:h-8 bg-white/50 border border-white/20 rounded-lg flex items-center justify-center group-hover:bg-white transition-colors shadow-sm mb-1.5">
+              <LayoutGrid className="w-3.5 h-3.5 text-black/80" />
             </div>
-            <span className="text-[min(1.6vw,7px)] font-bold tracking-tight text-black/80 block line-clamp-2">
+            <span className="text-[7px] md:text-[8px] font-bold text-black/80 tracking-tight whitespace-nowrap">
               More
             </span>
           </div>

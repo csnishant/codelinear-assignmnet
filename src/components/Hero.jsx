@@ -1,46 +1,48 @@
 import React from "react";
-import heroImage from "../assets/hero.jpg"; // Ensure you have this image in the specified path
+import heroImage from "../assets/hero.jpg";
 import BalanceCard from "./Hero/BalanceCard";
 import ActivityCard from "./Hero/ActivityCard";
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen pt-36 pb-16 flex flex-col justify-between px-6 md:px-12 max-w-7xl mx-auto text-white">
-      {/* Main Grid: Left Text & Right Media */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full my-auto">
+    <section className="relative w-full min-h-screen pt-32 md:pt-40 pb-16 flex flex-col justify-between px-6 sm:px-12 lg:px-16 max-w-7xl mx-auto text-white font-sans bg-[#030a16] overflow-x-hidden">
+      {/* Main Grid: Mobile me flex-col (centered), Desktop me grid (left-right spread) */}
+      <div className="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full my-auto z-10">
         {/* Left Column (Text Content) */}
-        <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-none">
+        {/* Mobile par text-center aur items-center, Desktop par text-left aur items-start */}
+        <div className="w-full lg:col-span-7 flex flex-col items-center text-center lg:items-start lg:text-left space-y-6 md:space-y-8">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[56px] font-medium tracking-tight leading-[1.15] md:leading-[1.1] text-white">
             The new foundation <br />
             of modern banking
           </h1>
 
-          <p className="text-gray-400 text-sm md:text-base max-w-lg leading-relaxed">
+          <p className="text-gray-400 text-xs sm:text-sm md:text-base max-w-md sm:max-w-xl leading-relaxed">
             We drive innovation and growth, provide seamless{" "}
             <br className="hidden md:inline" />
             customer experience and operational excellence
           </p>
 
-          {/* Action Buttons */}
-          <div className="flex flex-wrap gap-4 pt-4">
-            <button className="h-[48px] px-8 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 text-sm font-medium tracking-wide shadow-lg shadow-blue-600/20 hover:brightness-110 transition-all">
-              REQUEST DEMO
+          {/* Action Buttons: Mobile me perfectly centered aur fluid wrapper */}
+          <div className="flex flex-row items-center justify-center lg:justify-start gap-4 pt-2 w-full sm:w-auto">
+            <button className="h-[48px] md:h-[50px] px-6 sm:px-8 rounded-lg bg-blue-600 text-[11px] md:text-xs font-bold tracking-widest hover:bg-blue-700 transition-all uppercase border border-transparent shadow-[0_4px_20px_rgba(37,99,235,0.3)] whitespace-nowrap cursor-pointer">
+              Request Demo
             </button>
-            <button className="h-[48px] px-8 rounded-lg border border-gray-600 text-sm font-medium tracking-wide hover:bg-white/5 transition-all">
-              CONTACT US
+            <button className="h-[48px] md:h-[50px] px-6 sm:px-8 rounded-lg border border-gray-700 text-[11px] md:text-xs font-bold tracking-widest hover:bg-white/5 transition-all uppercase text-gray-300 whitespace-nowrap cursor-pointer">
+              Contact Us
             </button>
           </div>
         </div>
 
-        {/* Right Column (Visual/Image Component) */}
-        <div className="lg:col-span-5 relative flex justify-center items-center min-h-[400px] w-full">
-          {/* Soft Glow Background Behind Image */}
-          <div className="absolute w-[320px] h-[320px] bg-blue-500/20 rounded-full filter blur-[90px] pointer-events-none z-0" />
+        {/* Right Column (Visual Image & Floating Cards) */}
+        {/* Is container ka layout har screen size ke liye bound kiya hai taaki overflow na ho */}
+        <div className="w-full lg:col-span-5 relative flex justify-center items-center min-h-[350px] sm:min-h-[400px] md:min-h-[450px]">
+          {/* Soft Radial Glow background behind container */}
+          <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] bg-blue-500/25 rounded-full filter blur-[80px] md:blur-[100px] pointer-events-none z-0" />
 
-          {/* Main Container with Position Relative */}
-          <div className="relative w-full max-w-[450px] aspect-[4/3] z-10">
-            {/* Base Image (Woman with Laptop) */}
-            <div className="absolute inset-0 w-[85%] h-[85%] left-[5%] top-[10%] rounded-[32px] overflow-hidden">
+          {/* Wrapper bounding box matching ratios across screen sizes */}
+          <div className="relative w-full max-w-[340px] sm:max-w-[400px] md:max-w-[440px] aspect-[4/3] z-10 flex items-center justify-center">
+            {/* Center Base Image */}
+            <div className="w-[68%] h-[82%] rounded-[24px] sm:rounded-[32px] md:rounded-[40px] overflow-hidden shadow-2xl border border-white/5">
               <img
                 src={heroImage}
                 alt="User experience"
@@ -48,7 +50,6 @@ const Hero = () => {
               />
             </div>
 
-            {/* 1. Toni Kross Balance Card (Top Right) */}
             {/* 1. Toni Kross Balance Card */}
             <BalanceCard />
 
@@ -59,11 +60,11 @@ const Hero = () => {
       </div>
 
       {/* Footer / Trusted By Section */}
-      <div className="w-full pt-12 border-t border-white/5 mt-auto">
-        <p className="text-gray-500 text-xs font-medium tracking-wider mb-4 uppercase">
+      <div className="w-full pt-10 border-t border-white/10 mt-12 lg:mt-16 z-10">
+        <p className="text-gray-500 text-[10px] md:text-xs font-semibold tracking-widest mb-4 md:mb-6 uppercase text-center sm:text-left">
           Trusted By:
         </p>
-        <div className="flex flex-wrap items-center gap-x-8 gap-y-4 opacity-50 text-sm font-semibold tracking-wide">
+        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-8 md:gap-x-10 gap-y-4 opacity-40 text-[10px] md:text-xs font-bold tracking-widest text-gray-400">
           <span>SHELLS</span>
           <span>SmartFinder</span>
           <span>Zoomerr</span>
