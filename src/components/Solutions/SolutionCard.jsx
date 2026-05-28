@@ -34,11 +34,19 @@ const SolutionCard = ({ icon, title, desc, badge }) => {
       <div className="h-[21px] flex items-center pt-2">
         <a
           href="#"
-          className="flex items-center gap-[3px] text-xs font-bold tracking-widest text-[#00A3FF] uppercase transition-colors group opacity-100">
-          {/* Custom Split for exact Underline Style on image_aed3a4.png */}
-          <span className="border-b-2 border-[#00A3FF] pb-0.5">LEARN</span>
-          <span className="pl-[2px]">MORE</span>
-          <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform stroke-[2.5]" />
+          className="relative flex items-center gap-[3px] text-xs font-bold tracking-widest text-[#00A3FF] uppercase transition-colors group opacity-100">
+          {/* 1st Span: Target text jiske niche underline chahiye */}
+          <span className="relative pb-[4px]">LEARN</span>
+
+          {/* 2nd Span: Plain text wrapper */}
+          <span className="pl-[2px] pb-[4px]">MORE</span>
+
+          {/* Arrow Icon */}
+          <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform stroke-[2.5] mb-[4px]" />
+
+          {/* 3rd Dedicated Span: Sirf Underline Draw karne ke liye */}
+          {/* Iski width exact 'LEARN' text block (approx 44px) par match karke setup kari hai */}
+          <span className="absolute bottom-0 left-0 w-[44px] h-[2px] bg-[#00A3FF] rounded-full" />
         </a>
       </div>
     </div>

@@ -5,7 +5,8 @@ import Solutions from "../components/Solutions";
 
 const Home = () => {
   return (
-    <div className="min-h-screen w-full bg-[#0B111E] relative overflow-x-hidden">
+    <div
+      className="min-h-screen w-full bg-[#000D12] relative overflow-x-hidden">
       {/* 1. Top Global Floating Navbar */}
       <Navbar />
 
@@ -13,7 +14,7 @@ const Home = () => {
       <Hero />
 
       {/* 3. Tailor-made Solutions Feature Grid */}
-      <Solutions/>
+      <Solutions />
 
       {/* Hero Section / Main Content Example */}
       <main className="pt-32 flex flex-col items-center justify-center text-center px-4">

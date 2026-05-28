@@ -36,7 +36,7 @@ const Solutions = () => {
   ];
 
   return (
-    <section className="w-full py-28 px-6 sm:px-12 lg:px-20 max-w-7xl mx-auto bg-[#0B111E]">
+    <section className="w-full py-28 px-6 sm:px-12 lg:px-20 max-w-7xl mx-auto]">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
         {/* Isolated Component for Left Sticky Core Context */}
         <div className="lg:col-span-5">
