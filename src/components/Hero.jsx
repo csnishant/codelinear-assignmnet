@@ -2,6 +2,14 @@ import React from "react";
 import heroImage from "../assets/hero.jpg";
 import BalanceCard from "./Hero/BalanceCard";
 import ActivityCard from "./Hero/ActivityCard";
+import {
+  Shield,
+  Compass,
+  Activity,
+  Layers,
+  Terminal,
+  Waves,
+} from "lucide-react";
 
 const Hero = () => {
   return (
@@ -61,16 +69,46 @@ const Hero = () => {
 
       {/* Footer / Trusted By Section */}
       <div className="w-full pt-10 border-t border-white/10 mt-12 lg:mt-16 z-10">
-        <p className="text-gray-500 text-[10px] md:text-xs font-semibold tracking-widest mb-4 md:mb-6 uppercase text-center sm:text-left">
+        <p className="text-gray-500 text-[10px] md:text-xs font-semibold tracking-widest mb-6 uppercase text-center sm:text-left">
           Trusted By:
         </p>
-        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-8 md:gap-x-10 gap-y-4 opacity-40 text-[10px] md:text-xs font-bold tracking-widest text-gray-400">
-          <span>SHELLS</span>
-          <span>SmartFinder</span>
-          <span>Zoomerr</span>
-          <span>ArtVenue</span>
-          <span>kontrastr</span>
-          <span>WAVESMARATHON</span>
+
+        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-8 md:gap-x-10 gap-y-5 opacity-40 text-[11px] md:text-xs font-bold tracking-widest text-gray-400">
+          {/* SHELLS */}
+          <div className="flex items-center gap-1.5 hover:opacity-100 transition-opacity">
+            <Shield className="w-3.5 h-3.5 stroke-[2.5]" />
+            <span>SHELLS</span>
+          </div>
+
+          {/* SmartFinder */}
+          <div className="flex items-center gap-1.5 hover:opacity-100 transition-opacity">
+            <Compass className="w-3.5 h-3.5 stroke-[2.5]" />
+            <span>SmartFinder</span>
+          </div>
+
+          {/* Zoomerr */}
+          <div className="flex items-center gap-1.5 hover:opacity-100 transition-opacity">
+            <Activity className="w-3.5 h-3.5 stroke-[2.5]" />
+            <span>Zoomerr</span>
+          </div>
+
+          {/* ArtVenue */}
+          <div className="flex items-center gap-1.5 hover:opacity-100 transition-opacity">
+            <Layers className="w-3.5 h-3.5 stroke-[2.5]" />
+            <span>ArtVenue</span>
+          </div>
+
+          {/* kontrastr */}
+          <div className="flex items-center gap-1.5 hover:opacity-100 transition-opacity">
+            <Terminal className="w-3.5 h-3.5 stroke-[2.5]" />
+            <span>kontrastr</span>
+          </div>
+
+          {/* WAVESMARATHON */}
+          <div className="flex items-center gap-1.5 hover:opacity-100 transition-opacity">
+            <Waves className="w-3.5 h-3.5 stroke-[2.5]" />
+            <span>WAVESMARATHON</span>
+          </div>
         </div>
       </div>
     </section>
