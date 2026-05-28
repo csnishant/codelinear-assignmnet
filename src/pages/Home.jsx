@@ -5,6 +5,9 @@ import Solutions from "../components/Solutions";
 import { CloudDownload } from "lucide-react";
 import CloudBanking from "../components/CloudBanking";
 import EfficientBanking from "../components/EfficientBanking";
+import PaperlessHero from "../components/PaperLessHero";
+import DigitalBanking from "../components/DigitalBanking";
+import NoLegacySystems from "../components/NoLegacySystems";
 
 const Home = () => {
   return (
@@ -20,7 +23,11 @@ const Home = () => {
 
       <CloudBanking />
 
-      <EfficientBanking/>
+      <EfficientBanking />
+
+      <PaperlessHero />
+      <DigitalBanking />
+      <NoLegacySystems/>
       {/* Hero Section / Main Content Example */}
       <main className="pt-32 flex flex-col items-center justify-center text-center px-4">
         <h1 className="text-4xl md:text-6xl font-extrabold text-white max-w-2xl leading-tight">
