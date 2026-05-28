@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Solutions from "../components/Solutions";
 import { CloudDownload } from "lucide-react";
 import CloudBanking from "../components/CloudBanking";
+import EfficientBanking from "../components/EfficientBanking";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
 
       <CloudBanking />
 
+      <EfficientBanking/>
       {/* Hero Section / Main Content Example */}
       <main className="pt-32 flex flex-col items-center justify-center text-center px-4">
         <h1 className="text-4xl md:text-6xl font-extrabold text-white max-w-2xl leading-tight">
