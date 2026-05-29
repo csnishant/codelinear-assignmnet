@@ -1,8 +1,9 @@
 import React from "react";
 import InsightsSection from "./InsightsSection";
 import CaseStudies from "./CaseStudies";
-import PaperlessBanner from "./PaperlessBanner";
+
 import Footer from "./Footer";
+import PaperlessBanner from "./PaperLessBanner";
 
 const FintechLanding = () => {
   return (
@@ -15,7 +16,7 @@ const FintechLanding = () => {
 
       {/* 3. High-Conversion Paperless CTA Banner */}
       <div className="py-16 px-4 md:px-12 max-w-7xl mx-auto">
-        <PaperlessBanner />
+        <PaperlessBanner/>
       </div>
 
       {/* 4. Deep Tech 4-Column Footer */}

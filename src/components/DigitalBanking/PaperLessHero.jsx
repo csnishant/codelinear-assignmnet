@@ -2,7 +2,7 @@ import React from "react";
 
 const PaperlessHero = () => {
   return (
-    <div className="w-full min-h-[500px] bg-[#020617] flex items-center justify-center p-4 md:p-8 selection:bg-blue-600/30">
+    <div className="w-full min-h-[500px]flex items-center justify-center p-4 md:p-8 selection:bg-blue-600/30">
       {/* Main Glassmorphic Wrapper Card */}
       <div className="relative w-full max-w-6xl rounded-[32px] bg-gradient-to-b from-[#0a1220] to-[#030712] border border-slate-900/80 px-8 py-16 md:px-14 md:py-20 flex flex-col lg:flex-row items-start lg:items-center justify-between overflow-hidden shadow-2xl gap-8">
         {/* BACKGROUND EFFECT: "CB7" Outline Text Border */}
@@ -14,7 +14,7 @@ const PaperlessHero = () => {
             fontFamily:
               'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
           }}>
-          CB7
+          N7
         </div>
 
         {/* Content Section (Left) */}

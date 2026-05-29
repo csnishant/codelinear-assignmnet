@@ -34,7 +34,7 @@ export default function NoTraditionalBranches() {
   return (
     // Pehle: <div className="w-full bg-white ...">
     // Ab isko badal kar ye karein:
-    <div className="w-full bg-[#F4F9FC] text-[#000D12] overflow-hidden font-sans relative py-24 min-h-screen flex items-center">
+    <div className="w-full text-[#000D12] overflow-hidden font-sans relative py-24 min-h-screen flex items-center">
       {/* Subtle Right-side background design trace if needed to replicate layout theme */}
       <div className="absolute right-0 bottom-0 top-0 w-1/3 opacity-[0.05] pointer-events-none select-none z-0">
         <svg
