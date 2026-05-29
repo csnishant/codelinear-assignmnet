@@ -65,8 +65,7 @@ A modern, high-fidelity, responsive digital banking showcase interface built wit
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone <your-repository-url>
-cd <project-folder-name>
+git clone https://github.com/csnishant/codelinear-assignmnet.git
 ```
 
 ---
