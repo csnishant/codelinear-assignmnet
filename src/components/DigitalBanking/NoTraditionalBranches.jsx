@@ -2,10 +2,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import MobileMockup from "./DigitalBanking/MobileMockup";
+import MobileMockup from "./MobileMockup";
 
 // Profile screen ki screenshot image ko import karein
-import profileScreen from "../assets/profileScreen.png"; // Path check kar lijiye
+import profileScreen from "../../assets/profileScreen.png"; // Path check kar lijiye
 
 export default function NoTraditionalBranches() {
   const listItems = [
@@ -32,7 +32,9 @@ export default function NoTraditionalBranches() {
   };
 
   return (
-    <div className="w-full bg-white text-[#000D12] overflow-hidden font-sans relative py-24 min-h-screen flex items-center">
+    // Pehle: <div className="w-full bg-white ...">
+    // Ab isko badal kar ye karein:
+    <div className="w-full bg-[#F4F9FC] text-[#000D12] overflow-hidden font-sans relative py-24 min-h-screen flex items-center">
       {/* Subtle Right-side background design trace if needed to replicate layout theme */}
       <div className="absolute right-0 bottom-0 top-0 w-1/3 opacity-[0.05] pointer-events-none select-none z-0">
         <svg

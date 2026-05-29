@@ -5,12 +5,8 @@ import Solutions from "../components/Solutions";
 import { CloudDownload } from "lucide-react";
 import CloudBanking from "../components/CloudBanking";
 import EfficientBanking from "../components/EfficientBanking";
-import PaperlessHero from "../components/PaperLessHero";
-import DigitalBanking from "../components/DigitalBanking";
-import NoLegacySystems from "../components/NoLegacySystems";
-import NoTraditionalBranches from "../components/NoTraditionalBranches";
-import PaperLessCTA from "../components/PaperLessCTA";
 import FintechLanding from "../components/FintechLanding/FintechLanding";
+import DigitalBankingIndex from "../components/DigitalBanking/DigitalBankingIndex";
 
 const Home = () => {
   return (
@@ -28,13 +24,8 @@ const Home = () => {
 
       <EfficientBanking />
 
-      <PaperlessHero />
-      <DigitalBanking />
-      <NoLegacySystems />
-      <NoTraditionalBranches />
-      <PaperLessCTA />
+      <DigitalBankingIndex />
       <FintechLanding />
-
     </div>
   );
 };

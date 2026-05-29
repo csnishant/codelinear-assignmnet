@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 
 const PaperlessBanner = () => {
   return (
-    <div className="relative w-full min-h-[600px] bg-[#F4F9FC] flex items-center justify-center overflow-hidden p-6 font-sans">
-      {/* Outside Gradient Design/Aura (As specified in your prompt) */}
+    /* Yahan bg-[#F4F9FC] ko hata kar bg-transparent kar diya taaki ye parent ka color le sake */
+    <div className="relative w-full min-h-[500px] bg-transparent flex items-center justify-center overflow-hidden p-6 font-sans">
+      {/* Outside Gradient Design/Aura */}
       <div
         className="absolute pointer-events-none rounded-full blur-[120px]"
         style={{
@@ -22,35 +23,33 @@ const PaperlessBanner = () => {
       {/* Inside Main Container Card */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative w-full max-w-[1200px] min-h-[380px] rounded-[32px] p-8 md:p-14 flex flex-col md:flex-row items-center justify-between overflow-hidden shadow-2xl select-none"
         style={{
           background:
             "linear-gradient(99.21deg, #031E2A -12.22%, #000D12 59.26%)",
         }}>
-        {/* SVG Vector Background Shapes ("N7" outline simulation) */}
+        {/* SVG Vector Background Shapes */}
         <div className="absolute inset-0 opacity-15 pointer-events-none mix-blend-screen">
           <svg
             className="w-full h-full"
             viewBox="0 0 1000 400"
             fill="none"
             xmlns="http://www.w3.org/2000/svg">
-            {/* Outline 'N' */}
             <path
               d="M520 450V-50L750 450V-50"
               stroke="#00CFFD"
               strokeWidth="1.5"
               strokeMiterlimit="10"
             />
-            {/* Outline '7' */}
             <path
               d="M780 40H910L820 450"
               stroke="#0015CE"
               strokeWidth="1.5"
               strokeMiterlimit="10"
             />
-            {/* Top thin aesthetic line */}
             <line
               x1="800"
               y1="-100"
@@ -76,7 +75,6 @@ const PaperlessBanner = () => {
 
         {/* Right Action Buttons Side */}
         <div className="z-10 flex flex-col sm:flex-row gap-5 mt-8 md:mt-0 w-full md:w-auto items-center">
-          {/* Contact Us Button */}
           <motion.button
             whileHover={{
               scale: 1.03,
@@ -87,7 +85,6 @@ const PaperlessBanner = () => {
             Contact Us
           </motion.button>
 
-          {/* Request Demo Button */}
           <motion.button
             whileHover={{
               scale: 1.03,
