@@ -42,15 +42,21 @@ const Hero = () => {
         </div>
 
         {/* Right Column (Visual Image & Floating Cards) */}
-        {/* Is container ka layout har screen size ke liye bound kiya hai taaki overflow na ho */}
-        <div className="w-full lg:col-span-5 relative flex justify-center items-center min-h-[350px] sm:min-h-[400px] md:min-h-[450px]">
+        <div className="w-full lg:col-span-5 relative flex justify-center items-center min-h-[320px] sm:min-h-[400px] md:min-h-[450px] mt-6 lg:mt-0 overflow-visible">
           {/* Soft Radial Glow background behind container */}
-          <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] bg-blue-500/25 rounded-full filter blur-[80px] md:blur-[100px] pointer-events-none z-0" />
+          <div className="absolute w-[240px] h-[240px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] bg-blue-500/25 rounded-full filter blur-[60px] md:blur-[100px] pointer-events-none z-0" />
 
-          {/* Wrapper bounding box matching ratios across screen sizes */}
-          <div className="relative w-full max-w-[340px] sm:max-w-[400px] md:max-w-[440px] aspect-[4/3] z-10 flex items-center justify-center">
-            {/* Center Base Image */}
-            <div className="w-[68%] h-[82%] rounded-[24px] sm:rounded-[32px] md:rounded-[40px] overflow-hidden shadow-2xl border border-white/5">
+          {/* 
+    THE EXACT DESKTOP REPLICA SCALE TRICK WITH CORRECT LAYER STACKING:
+    - Humne isolate class add ki hai jo ek naya stacking context banati hai.
+    - `z-10` filter scale container ko background glow ke upar rakhta hai.
+  */}
+          <div
+            className="relative w-[340px] sm:w-[400px] md:w-[440px] aspect-[4/3] z-10 flex items-center justify-center 
+                  scale-[0.62] xs:scale-[0.72] sm:scale-[0.85] md:scale-100 transition-transform duration-300 origin-center isolate">
+            {/* Center Base Image (Ladki ki photo) */}
+            {/* CRITICAL FIX: Z-index ko explicit 'z-0' kiya taaki yeh cards ke hamesha piche rahe */}
+            <div className="w-[68%] h-[82%] rounded-[32px] md:rounded-[40px] overflow-hidden shadow-2xl border border-white/5 relative z-0">
               <img
                 src={heroImage}
                 alt="User experience"
@@ -59,10 +65,20 @@ const Hero = () => {
             </div>
 
             {/* 1. Toni Kross Balance Card */}
-            <BalanceCard />
+            {/* CRITICAL FIX: explicit high z-index wrapper diya hai taaki component image ko overlap kare */}
+            <div className="absolute inset-0 pointer-events-none z-20">
+              <div className="pointer-events-auto w-full h-full relative">
+                <BalanceCard />
+              </div>
+            </div>
 
             {/* 2. Recent Activity Card */}
-            <ActivityCard />
+            {/* CRITICAL FIX: same high z-index overlay treatment */}
+            <div className="absolute inset-0 pointer-events-none z-20">
+              <div className="pointer-events-auto w-full h-full relative">
+                <ActivityCard />
+              </div>
+            </div>
           </div>
         </div>
       </div>

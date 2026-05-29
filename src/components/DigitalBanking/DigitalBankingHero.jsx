@@ -45,11 +45,18 @@ export default function DigitalBankingHero() {
 
         {/* Left Matrix */}
         <div className="lg:col-span-4 flex flex-col justify-center space-y-6 z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-[54px] font-extrabold text-slate-900 leading-[1.1] tracking-tight text-left">
+          <h1
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold tracking-tight text-left text-[#000D12]"
+            style={{
+              color: "#000D12",
+              background: "transparent",
+              backgroundImage: "none",
+              WebkitTextFillColor: "#000D12",
+              opacity: 1,
+              visibility: "visible",
+            }}>
             Digital banking <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-600">
-              out-of-the-box
-            </span>
+            out-of-the-box
           </h1>
           <p className="text-slate-500 text-sm md:text-base leading-relaxed max-w-sm font-medium text-left">
             N7 helps your financial institution improve the client experience,
