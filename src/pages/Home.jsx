@@ -8,6 +8,8 @@ import EfficientBanking from "../components/EfficientBanking";
 import PaperlessHero from "../components/PaperLessHero";
 import DigitalBanking from "../components/DigitalBanking";
 import NoLegacySystems from "../components/NoLegacySystems";
+import NoTraditionalBranches from "../components/NoTraditionalBranches";
+import PaperLessCTA from "../components/PaperLessCTA";
 
 const Home = () => {
   return (
@@ -27,7 +29,10 @@ const Home = () => {
 
       <PaperlessHero />
       <DigitalBanking />
-      <NoLegacySystems/>
+      <NoLegacySystems />
+      <NoTraditionalBranches />
+      <PaperLessCTA/>
+
       {/* Hero Section / Main Content Example */}
       <main className="pt-32 flex flex-col items-center justify-center text-center px-4">
         <h1 className="text-4xl md:text-6xl font-extrabold text-white max-w-2xl leading-tight">
