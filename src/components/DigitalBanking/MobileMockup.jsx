@@ -22,17 +22,20 @@ export default function MobileMockup({ screenImage, screenshot }) {
       {/* 1. Inner App UI Screenshot Layer */}
       {currentScreen && (
         <div
-          className="absolute"
+          className="absolute shadow-inner"
           style={{
-            top: "2.2%",
-            left: "4.3%",
-            right: "4.3%",
-            bottom: "1.2%",
-            borderRadius: "32px",
-            backgroundColor: "#fff",
+            /* Fixed: Padding create karne ke liye bounds ko 2.2% aur 4.3% se badha kar safely compact kiya */
+            top: "3.2%",
+            left: "5.5%",
+            right: "5.5%",
+            bottom: "3.2%",
+            /* Inner card borders perfectly match edge scaling curves */
+            borderRadius: "26px",
+            backgroundColor: "#ffffff",
             backgroundImage: `url(${currentScreen})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center top",
+            /* backgroundSize ko contain/cover metrics balance diya taaki elements text cut-off na karein */
+            backgroundSize: "100% 100%",
+            backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
             zIndex: 10,
           }}
@@ -43,19 +46,20 @@ export default function MobileMockup({ screenImage, screenshot }) {
       <div
         className="absolute left-1/2 -translate-x-1/2 flex justify-center z-30"
         style={{
-          top: "2.2%",
-          width: "110px",
-          height: "18px",
+          /* Notch position slightly adjusted to scale nicely with new inner spacing */
+          top: "3.2%",
+          width: "102px",
+          height: "16px",
         }}>
         <div
           className="w-full h-full bg-black relative"
           style={{
-            borderBottomLeftRadius: "14px",
-            borderBottomRightRadius: "14px",
+            borderBottomLeftRadius: "12px",
+            borderBottomRightRadius: "12px",
           }}>
-          <div className="absolute top-[4px] left-1/2 -translate-x-1/2 w-10 h-[2px] bg-zinc-800 rounded-full" />
-          <div className="absolute top-[4px] right-[24px] w-2.5 h-2.5 bg-[#0d1326] border border-zinc-900 rounded-full flex items-center justify-center">
-            <div className="w-1 h-1 bg-blue-900/40 rounded-full" />
+          <div className="absolute top-[3px] left-1/2 -translate-x-1/2 w-8 h-[2px] bg-zinc-800 rounded-full" />
+          <div className="absolute top-[3px] right-[20px] w-2 h-2 bg-[#0d1326] border border-zinc-900 rounded-full flex items-center justify-center">
+            <div className="w-0.5 h-0.5 bg-blue-900/40 rounded-full" />
           </div>
         </div>
       </div>

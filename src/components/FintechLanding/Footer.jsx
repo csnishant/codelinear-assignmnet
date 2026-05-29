@@ -9,12 +9,13 @@ export default function Footer() {
         {/* ================= LEFT SIDE: DYNAMIC OVERSIZED LOGO PILLAR ================= */}
         <div className="lg:col-span-4 flex items-start justify-start relative select-none">
           <h1
-            className="font-black tracking-tighter leading-none text-transparent bg-clip-text lg:absolute lg:-top-16 lg:-left-4"
+            className="font-black tracking-tighter leading-none text-transparent bg-clip-text lg:absolute lg:-top-16 lg:-left-4 select-none"
             style={{
               fontFamily: "'Archivo', system-ui, sans-serif",
               fontSize: "clamp(100px, 20vw, 290px)",
+              /* Exactly matching the shared image: Pure Electric Cyan transitioning to rich Royal Blue */
               background:
-                "linear-gradient(135deg, #01B4FD 0%, #74F1AE 50%, #013ACF 100%)",
+                "linear-gradient(110deg, #00C3FF 15%, #0077FF 50%, #003FE6 90%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}>
