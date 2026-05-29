@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const PaperlessBanner = () => {
+const PaperLessBanner = () => {
   return (
     <div className="relative w-full flex items-center justify-center overflow-hidden py-10 font-sans">
       {/* 2. Inside Content Container Block */}
@@ -91,4 +91,4 @@ const PaperlessBanner = () => {
   );
 };
 
-export default PaperlessBanner;
+export default PaperLessBanner;
