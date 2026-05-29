@@ -66,6 +66,7 @@ A modern, high-fidelity, responsive digital banking showcase interface built wit
 
 ```bash
 git clone https://github.com/csnishant/codelinear-assignmnet.git
+cd codelinear-assignmnet
 ```
 
 ---
