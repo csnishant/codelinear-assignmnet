@@ -10,6 +10,7 @@ import DigitalBanking from "../components/DigitalBanking";
 import NoLegacySystems from "../components/NoLegacySystems";
 import NoTraditionalBranches from "../components/NoTraditionalBranches";
 import PaperLessCTA from "../components/PaperLessCTA";
+import FintechLanding from "../components/FintechLanding/FintechLanding";
 
 const Home = () => {
   return (
@@ -31,18 +32,9 @@ const Home = () => {
       <DigitalBanking />
       <NoLegacySystems />
       <NoTraditionalBranches />
-      <PaperLessCTA/>
+      <PaperLessCTA />
+      <FintechLanding />
 
-      {/* Hero Section / Main Content Example */}
-      <main className="pt-32 flex flex-col items-center justify-center text-center px-4">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white max-w-2xl leading-tight">
-          Next-Gen Solutions with <span className="text-blue-500">N7</span>
-        </h1>
-        <p className="mt-4 text-gray-400 max-w-md">
-          Experience the seamless overlay navbar design built with pixel-perfect
-          specifications.
-        </p>
-      </main>
     </div>
   );
 };
